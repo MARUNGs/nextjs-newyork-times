@@ -7,8 +7,8 @@ export async function getList() {
   return json.results;
 }
 
-export async function bestSellerInfo(name: string) {
-  const response = await fetch(`${API_URL}/list?name=${name}`);
+export async function getDetail(id: string) {
+  const response = await fetch(`${API_URL}/list?name=${id}`);
   const json = await response.json();
-  return json;
+  return json.results;
 }
