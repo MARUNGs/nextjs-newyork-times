@@ -1,16 +1,11 @@
+import { Sour_Gummy } from "next/font/google";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import "../app/(Home)/globals.css";
+import Navigation from "@/components/Navigation";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+// font 적용
+const sourGummy = Sour_Gummy({
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,9 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={sourGummy.className}>
+        <Navigation />
         {children}
       </body>
     </html>
