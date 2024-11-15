@@ -2,7 +2,6 @@ import { getDetail } from "@/api/data";
 import LinkBox from "@/components/LinkBox";
 import { IDetail, IParams } from "@/types/DetailType";
 import Image from "next/image";
-import styles from "@/styles/Detail.module.css";
 
 export default async function List({ params: { id } }: IParams) {
   const detail: IDetail = await getDetail(id);
