@@ -1,12 +1,12 @@
-import { Sour_Gummy } from "next/font/google";
+// import { Sour_Gummy } from "next/font/google";
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import Navigation from "@/components/Navigation";
 
 // font 적용
-const sourGummy = Sour_Gummy({
-  subsets: ["latin"],
-});
+// const sourGummy = Sour_Gummy({
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={sourGummy.className}>
+      {/* <body className={sourGummy.className}> */}
+      <body>
         <Navigation />
         {children}
       </body>

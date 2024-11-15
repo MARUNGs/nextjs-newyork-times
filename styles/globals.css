@@ -106,9 +106,16 @@ section {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "SourGummy";
+  src: url("../public/fonts/SourGummy-Italic.ttf") format("truetype");
+}
+
 body {
   line-height: 1;
   background-color: #f3f3f2;
+  font-family: -apple-system, SourGummy, sans-serif;
 }
 ol,
 ul {
