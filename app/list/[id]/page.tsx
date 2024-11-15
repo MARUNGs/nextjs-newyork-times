@@ -4,7 +4,8 @@ import { IDetail, IParams } from "@/types/DetailType";
 import Image from "next/image";
 
 // main
-export default async function List({ params }: IParams) {
+export default async function List(props: IParams) {
+  const params = await props.params;
   if (!params?.id) {
     return <div>Invalid ID</div>;
   }
