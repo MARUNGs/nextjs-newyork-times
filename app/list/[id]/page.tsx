@@ -1,18 +1,8 @@
 import { getDetail } from "@/api/data";
 import LinkBox from "@/components/LinkBox";
-import { IDetail } from "@/types/DetailType";
+import { IDetail, IParams } from "@/types/DetailType";
 import Image from "next/image";
 
-interface IParams {
-  params: Promise<{
-    id: string;
-  }>;
-  searchParams?: Promise<{
-    [key: string]: string | string[] | undefined;
-  }>;
-}
-
-// main
 export default async function List(props: IParams) {
   const params = await props.params;
 

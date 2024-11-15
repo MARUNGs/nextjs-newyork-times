@@ -1,10 +1,10 @@
 export interface IParams {
-  params: {
+  params: Promise<{
     id: string;
-  };
-  searchParams?: {
+  }>;
+  searchParams?: Promise<{
     [key: string]: string | string[] | undefined;
-  };
+  }>;
 }
 
 interface Iisbns {
