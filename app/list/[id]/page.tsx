@@ -1,18 +1,25 @@
 import { getDetail } from "@/api/data";
 import LinkBox from "@/components/LinkBox";
-import { IDetail } from "@/types/DetailType";
+import { IDetail, IParams } from "@/types/DetailType";
 import Image from "next/image";
 
-export default async function List({ params }: { params: { id: string } }) {
+// main
+export default async function List({ params }: IParams) {
+  if (!params?.id) {
+    return <div>Invalid ID</div>;
+  }
+
   const detail: IDetail = await getDetail(params.id);
   const books = detail?.books;
+
+  if (!books) return <div>Not Found...</div>;
 
   return (
     <>
       <div
         className={`grid grid-cols-4 gap-4 justify-items-center items-center`}
       >
-        {books?.map((book) => (
+        {books.map((book) => (
           <div
             key={book.rank}
             className="

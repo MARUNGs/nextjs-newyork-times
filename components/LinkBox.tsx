@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import { ILinkBox } from "@/types/LinkBoxType";
 
 export default function LinkBox({ content, name, link }: ILinkBox) {
-  const href = name ? `/list/${name}` : link;
+  const href = name ? `/list/${encodeURIComponent(name)}` : link;
 
   return (
     <>

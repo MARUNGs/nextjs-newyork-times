@@ -11,6 +11,5 @@ export async function getList() {
 export async function getDetail(id: string) {
   const response = await fetch(`${API_URL}/list?name=${id}`);
   const json = await response.json();
-  console.log(json.results);
   return json.results;
 }
