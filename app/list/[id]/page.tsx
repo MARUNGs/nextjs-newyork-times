@@ -4,9 +4,9 @@ import { IDetail } from "@/types/DetailType";
 import Image from "next/image";
 
 interface IParams {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
   searchParams?: {
     [key: string]: string | string[] | undefined;
   };
@@ -15,9 +15,8 @@ interface IParams {
 // main
 export default async function List(props: IParams) {
   const params = await props.params;
-  if (!params?.id) {
-    return <div>Invalid ID</div>;
-  }
+
+  if (!params?.id) return <div>Invalid ID</div>;
 
   const detail: IDetail = await getDetail(params.id);
   const books = detail.books;
