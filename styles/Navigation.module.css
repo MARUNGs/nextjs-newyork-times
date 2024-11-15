@@ -46,9 +46,9 @@
 
 .pencilHatching {
   position: relative;
-  /* padding: 20px; */
   background-color: white;
   overflow: hidden;
+  background-color: #f3f3f2;
 }
 
 /* 가상 요소들을 처음에는 투명하게 설정 */

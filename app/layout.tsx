@@ -1,6 +1,6 @@
 import { Sour_Gummy } from "next/font/google";
 import type { Metadata } from "next";
-import "../app/(Home)/globals.css";
+import "../styles/globals.css";
 import Navigation from "@/components/Navigation";
 
 // font 적용

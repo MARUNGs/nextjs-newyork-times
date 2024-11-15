@@ -108,6 +108,7 @@ section {
 }
 body {
   line-height: 1;
+  background-color: #f3f3f2;
 }
 ol,
 ul {
@@ -127,12 +128,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-body {
-  /* font-family: 'Source Sans Pro', sans-serif; */
-  /* background-color: ${(props) => props.theme.bgColor}; */
-  /* color: ${(props) => props.theme.textColor}; */
 }
 
 a {
