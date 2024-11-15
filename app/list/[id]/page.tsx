@@ -3,8 +3,8 @@ import LinkBox from "@/components/LinkBox";
 import { IDetail, IParams } from "@/types/DetailType";
 import Image from "next/image";
 
-export default async function List({ params: { id } }: IParams) {
-  const detail: IDetail = await getDetail(id);
+export default async function List({ params }: { params: { id: string } }) {
+  const detail: IDetail = await getDetail(params.id);
   const books = detail?.books;
 
   return (
