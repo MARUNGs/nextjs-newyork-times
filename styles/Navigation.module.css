@@ -91,6 +91,19 @@
   animation: pencilShake 12s infinite linear;
 }
 
+.pencilHatchingDefault {
+  opacity: 1;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    rgba(43, 43, 43, 0.2) 4px,
+    rgba(43, 43, 43, 0.2) 5px,
+    transparent 6px
+  );
+  animation: pencilShake 12s infinite linear;
+}
+
 /* 진한 버전 - hover 시 */
 .pencilHatching-dark:hover::before,
 .pencilHatching-dark:hover::after {
