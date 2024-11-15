@@ -2,7 +2,7 @@ export interface IParams {
   params: {
     id: string;
   };
-  searchParams: {
+  searchParams?: {
     [key: string]: string | string[] | undefined;
   };
 }
