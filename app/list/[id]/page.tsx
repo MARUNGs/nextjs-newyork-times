@@ -1,6 +1,6 @@
 import { getDetail } from "@/api/data";
 import LinkBox from "@/components/LinkBox";
-import { IDetail, IParams } from "@/types/DetailType";
+import { IDetail } from "@/types/DetailType";
 import Image from "next/image";
 
 export default async function List({ params }: { params: { id: string } }) {
