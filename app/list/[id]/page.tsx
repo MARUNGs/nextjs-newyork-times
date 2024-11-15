@@ -7,9 +7,9 @@ interface IParams {
   params: Promise<{
     id: string;
   }>;
-  searchParams?: {
+  searchParams?: Promise<{
     [key: string]: string | string[] | undefined;
-  };
+  }>;
 }
 
 // main
