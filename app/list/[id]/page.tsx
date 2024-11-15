@@ -1,7 +1,16 @@
 import { getDetail } from "@/api/data";
 import LinkBox from "@/components/LinkBox";
-import { IDetail, IParams } from "@/types/DetailType";
+import { IDetail } from "@/types/DetailType";
 import Image from "next/image";
+
+interface IParams {
+  params: {
+    id: string;
+  };
+  searchParams?: {
+    [key: string]: string | string[] | undefined;
+  };
+}
 
 // main
 export default async function List(props: IParams) {
@@ -11,7 +20,7 @@ export default async function List(props: IParams) {
   }
 
   const detail: IDetail = await getDetail(params.id);
-  const books = detail?.books;
+  const books = detail.books;
 
   if (!books) return <div>Not Found...</div>;
 
